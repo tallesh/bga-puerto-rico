@@ -3,7 +3,7 @@
 // @description  Track victory points from all players
 // @author       https://github.com/tallesh
 // @namespace    https://github.com/tallesh/bga-puerto-rico
-// @version      1.0.0
+// @version      1.0.1
 // @include      *boardgamearena.com/*
 // @grant        none
 // ==/UserScript==
@@ -214,7 +214,7 @@
     }
 
     // Everything starts here
-    window.onload = async function() {
+    window.addEventListener('load', async function() {
         if (Is_Inside_Game) {
             for (let i = 0; i < 100; i++) {
                 if(window.parent.gameui !== undefined && window.parent.gameui !== null){
@@ -236,5 +236,5 @@
                 window.parent.prMonitor = prMonitor.init();
             }
         }
-    };
+    });
 })();
